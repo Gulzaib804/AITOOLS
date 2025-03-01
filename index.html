@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover and compare the best AI tools for startups, developers, and marketers. Find tools for AI writing, image generation, coding, and more.">
+    <meta name="keywords" content="AI tools, AI directory, best AI tools, AI for developers, AI for marketers">
+    <title>AI Tools Directory - Find the Best AI Tools</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6200ea;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #6200ea;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6200ea, #3700b3);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0 40px;
+        }
+
+        .hero .cta-button {
+            background: white;
+            color: #6200ea;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background: #f4f4f9;
+        }
+
+        /* Featured Categories Section */
+        .featured-categories {
+            padding: 60px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .featured-categories h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #6200ea;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: #f4f4f9;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: #6200ea;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .category-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #6200ea;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .category-card a:hover {
+            background: #3700b3;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            color: #6200ea;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .newsletter-form button {
+            background: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #3700b3;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>AI Tools Directory</h1>
+        <p>Discover the best AI tools for your needs.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">AI Tools</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ai-tools-directory.html">AI Tools Directory</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Find the Best AI Tools for Your Projects</h2>
+        <p>Explore a curated directory of AI tools for writing, coding, design, and more.</p>
+        <a href="ai-tools-directory.html" class="cta-button">Explore Tools</a>
+    </section>
+
+    <!-- Featured Categories Section -->
+    <section class="featured-categories">
+        <h2>Featured Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Writing Tools</h3>
+                <p>AI tools for content creation, grammar, and writing assistance.</p>
+                <a href="ai-tools-directory.html#writing-tools">Explore Writing Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>Video Editing Tools</h3>
+                <p>AI tools for video editing, creation, and enhancement.</p>
+                <a href="ai-tools-directory.html#video-editing-tools">Explore Video Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>Image Tools</h3>
+                <p>AI tools for image generation, editing, and enhancement.</p>
+                <a href="ai-tools-directory.html#image-tools">Explore Image Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>File Conversion Tools</h3>
+                <p>AI tools for converting files (PDF, Word, JPG, etc.).</p>
+                <a href="ai-tools-directory.html#file-conversion-tools">Explore Conversion Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>Voice Editing Tools</h3>
+                <p>AI tools for voice editing, text-to-speech, and audio enhancement.</p>
+                <a href="ai-tools-directory.html#voice-editing-tools">Explore Voice Tools</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AI Tools Directory</h3>
+                <p>Discover the best AI tools for your projects. Stay updated with the latest trends in AI technology.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ai-tools-directory.html">AI Tools Directory</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>Get the latest AI tool updates directly in your inbox.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI Tools Directory. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
